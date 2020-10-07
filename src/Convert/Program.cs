@@ -4,7 +4,19 @@ using DinkToPdf;
 
 namespace Convert {
     class Program {
+        static void White() {
+            // https://qwerty.dev/whitespace/
+            char c = (char)127;
+
+            var str = $"__ __";
+
+            foreach (var item in str) {
+                Console.WriteLine($"{item} = {(int)item}");
+            }
+        }
+
         static void Main(string[] args) {
+
             var doc = new HtmlToPdfDocument() {
                 GlobalSettings = {
                     ColorMode = ColorMode.Color,

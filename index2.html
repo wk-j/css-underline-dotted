@@ -3,44 +3,56 @@
 <head>
     <style>
         body {
-            padding: 10px;
+            padding: 50px;
         }
 
-        .dotted {
-            margin: 0 10px 0px 10px;
+        .d-dot {
             border-bottom: 1px dotted;
-            display: block;
-            float: right;
-            width: calc(100% - 100px);
         }
 
-        .label {
-            width: 100px;
-            display: block;
-            background: lightgoldenrodyellow;
+        .d-label {
+            width: 80px;
         }
 
-        .wrapper {
+        table {
             width: 100%;
-            font-size: 20px;
         }
     </style>
 </head>
 
 <body>
 
+    <div class="d-head-section">
+
+        <table>
+            <tbody>
+                <tr>
+                    <td class="d-label">ส่วนงาน</td>
+                    <td colspan="3" class="d-dot">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="d-label">ที่</td>
+                    <td class="d-dot"></td>
+                    <td class="d-label">วันที่</td>
+                    <td class="d-dot"></td>
+                </tr>
+                <tr>
+                    <td class="d-label">เรื่อง</td>
+                    <td colspan="3" class="d-dot"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div>
+            <span>เรียน</span>
+            <div>
+                <span style="margin-left:20px"></span>
+                <span>@Model.Reason</span>
+            </div>
+        </div>
+    </div>
+
 </body>
-<div>
-    <div class="wrapper">
-        <span class="label">ส่วนงาน</span><span class="dotted"></span>
-    </div>
-    <div class="wrapper">
-        <span class="label">ที่</span><span class="dotted"></span>
-        <span class="label">วันที่</span><span class="dotted"></span>
-    </div>
-    <div class="wrapper">
-        <span class="label">เรื่อง</span><span class="dotted"></span>
-    </div>
-</div>
 
 </html>
